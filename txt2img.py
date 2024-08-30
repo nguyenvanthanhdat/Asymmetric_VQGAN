@@ -111,7 +111,8 @@ def main():
         type=str,
         nargs="?",
         help="dir to write results to",
-        default="/mnt/output/git_results"
+        # default="/mnt/output/git_results"
+        default="output/git_results"
     )
     parser.add_argument(
         "--config_c",
@@ -224,7 +225,8 @@ def main():
     parser.add_argument(
         "--ckpt",
         type=str,
-        default="/mnt/output/pre_models/v1-5-pruned-emaonly.ckpt",
+        # default="/mnt/output/pre_models/v1-5-pruned-emaonly.ckpt",
+        default="checkpoints/v1-5-pruned-emaonly.ckpt",
         help="path to checkpoint of model",
     )
     parser.add_argument(
