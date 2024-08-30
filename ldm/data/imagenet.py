@@ -213,8 +213,8 @@ class ImageNetTrain(ImageNetBase):
             self.root = os.path.join(self.data_root, self.NAME)
         else:
             # cachedir = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
-            # cachedir = "./datasets/ImageNet/"
-            cachedir = "/mnt/datasets/"
+            cachedir = "./datasets/ImageNet/"
+            # cachedir = "/mnt/datasets/"
             self.root = os.path.join(cachedir, self.NAME)
 
         # self.datadir = os.path.join(self.root, "data")
@@ -228,7 +228,8 @@ class ImageNetTrain(ImageNetBase):
             print("Preparing dataset {} in {}".format(self.NAME, self.root))
 
             datadir = self.datadir
-            if not os.path.exists(datadir):
+            # if not os.path.exists(datadir):
+            if not os.path.exists(datadir) or True:
                 path = os.path.join(self.root, self.FILES[0])
                 if not os.path.exists(path) or not os.path.getsize(path)==self.SIZES[0]:
                     import academictorrents as at
