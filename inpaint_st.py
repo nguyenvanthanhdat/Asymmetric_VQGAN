@@ -216,7 +216,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--outdir",
         type=str,
-        default="/mnt/output/git_results",
+        default="inpaint/output/git_results",
         help="dir to write results to",
     )
     parser.add_argument(
@@ -228,7 +228,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--indir",
         type=str,
-        default="/mnt/output/my_dataset/val",
+        default="data/val/",
         help="dir containing image-mask pairs (`example.png` and `example_mask.png`)",
     )
     parser.add_argument(
@@ -240,7 +240,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--ckpt_d",
         type=str,
-        default="/mnt/output/pre_models/sd-v1-5-inpainting.ckpt",
+        default="checkpoints/sd-v1-5-inpainting.ckpt",
         help="dir to save diffusion model",
     )
 
