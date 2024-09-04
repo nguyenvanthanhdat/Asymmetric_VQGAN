@@ -36,6 +36,7 @@ pip install wandb
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
 pip install -e git+https://github.com/openai/CLIP.git@main#egg=clip
+pip install -e git+https://github.com/pytheralab/ObjMask.git@train/0.1#egg=objmask
 ```
 
 # Pretrained diffusion Models
