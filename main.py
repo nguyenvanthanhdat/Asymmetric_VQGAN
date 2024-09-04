@@ -680,9 +680,9 @@ if __name__ == "__main__":
             run = wandb.init(
                 id=opt.tag,
                 name=opt.tag,
-                entity='',
-                project='',
-                job_type='',
+                # entity='',
+                # project='',
+                # job_type='',
                 config=opt,
             )
         # data
