@@ -15,10 +15,10 @@ class AlignModel(nn.Module):
         
     def forward(self, mae_output):
         # change order of dimmension
-        mae_output = mae_output.permute(0, 2, 1)
-        dimm_aligned = self.dimmension_align(mae_output)
-        dimm_aligned = dimm_aligned.permute(0, 2, 1)
-        attn1 = self.attn1(dimm_aligned)
+        mae_output = mae_output.permute(0, 2, 1) # (batch, dimm, seq)
+        dimm_aligned = self.dimmension_align(mae_output) # (batch, output_dim, seq)
+        dimm_aligned = dimm_aligned.permute(0, 2, 1) # (batch, seq, output_dim)
+        attn1 = self.attn1(dimm_aligned) 
         attn2 = self.attn2(attn1)
         attn3 = self.attn3(attn2)
         attn4 = self.attn4(attn3)
