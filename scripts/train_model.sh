@@ -1,4 +1,4 @@
-python main.py --base configs/autoencoder/autoencoder_kl_32x32x4.yaml \
+python main.py --base configs/autoencoder/train_pipeline.yaml \
     -t \
     --gpus 0,1 \
     --epoch 1 \
